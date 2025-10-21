@@ -272,10 +272,41 @@
             font-size: 14px;
         }
 
+        /* 画像の基本設定 */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* ヘッダー画像のレスポンシブ対応 */
+        .header img {
+            width: 100%;
+            max-width: none;
+            height: auto;
+        }
+
+        /* コンテンツ内の画像 */
+        .content img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* 固定高さの画像を調整 */
+        .content img[style*="height: 400px"] {
+            height: auto !important;
+            max-height: 400px;
+        }
+
         /* レスポンシブ対応 */
         @media (max-width: 768px) {
             .header {
-                padding: 40px 25px;
+                padding: 20px 10px;
+            }
+
+            .header img {
+                width: 100%;
+                height: auto;
             }
 
             .main-title {
@@ -292,7 +323,7 @@
             }
 
             .content {
-                padding: 40px 25px;
+                padding: 30px 15px;
             }
 
             .section-number {
@@ -301,6 +332,20 @@
 
             .section-title {
                 font-size: 20px;
+            }
+
+            /* スマホでの画像調整 */
+            .content img {
+                width: 100%;
+                height: auto !important;
+                max-height: 250px;
+                object-fit: cover;
+                margin: 15px 0;
+            }
+
+            /* 動画コンテナのスマホ対応 */
+            .video-container {
+                margin: 20px 0;
             }
         }
     </style>
