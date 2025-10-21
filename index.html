@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子育て座談会 インタビュー形式文字起こし（最終版）</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'こぶりなゴシック', 'Koburi na Gothic', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+            background-color: #f8f5e8;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        /* ヘッダーセクション */
+        .header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .header img {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+
+        .logo {
+            font-size: 24px;
+            color: #5a9;
+            margin-bottom: 30px;
+            font-weight: bold;
+            font-family: 'こぶりなゴシック', 'Koburi na Gothic', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+        }
+
+        .main-title {
+            font-size: 42px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-family: 'こぶりなゴシック', 'Koburi na Gothic', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+        }
+
+        .sub-title {
+            font-size: 16px;
+            margin-bottom: 50px;
+            line-height: 2;
+        }
+
+        /* 参加者グリッド */
+        .participants-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .participant {
+            text-align: center;
+        }
+
+        .participant-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #5a9;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            overflow: hidden;
+        }
+
+        .participant-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .participant-name {
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .participant-detail {
+            font-size: 11px;
+            color: #999;
+        }
+
+        /* コンテンツセクション */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px;
+            background: white;
+        }
+
+        /* イントロテキスト */
+        .intro-text {
+            background: #fafaf5;
+            padding: 30px;
+            font-size: 15px;
+            line-height: 2;
+            margin-bottom: 80px;
+        }
+
+        /* トークセクション */
+        .talk-section {
+            margin-bottom: 80px;
+        }
+
+        .section-number {
+            font-size: 48px;
+            color: #ddd;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+            font-family: 'こぶりなゴシック', 'Koburi na Gothic', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+        }
+
+        /* 話者 */
+        .speaker {
+            display: flex;
+            margin-bottom: 25px;
+        }
+
+        .speaker-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #5a9;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .speaker-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .speaker-content {
+            margin-left: 15px;
+            flex: 1;
+        }
+
+        .speaker-name {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .speaker-text {
+            font-size: 15px;
+            line-height: 2;
+        }
+
+        /* 家族バッジ */
+        .family-badge {
+            background: #5a9;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* ハイライトボックス */
+        .highlight-box {
+            background: #fffef5;
+            border: 1px solid #e8e5d0;
+            padding: 20px 25px;
+            margin: 40px 0;
+        }
+
+        .highlight-box h4 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .highlight-box ul {
+            list-style: none;
+        }
+
+        .highlight-box li {
+            font-size: 14px;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .highlight-box li:before {
+            content: "・";
+            position: absolute;
+            left: 0;
+        }
+
+        /* 画像プレースホルダー */
+        .image-placeholder {
+            width: 100%;
+            height: 400px;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #999;
+            margin: 40px 0;
+        }
+
+        /* サブセクション */
+        .sub-section {
+            margin-bottom: 50px;
+        }
+
+        .sub-section h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #5a9;
+        }
+
+        /* YouTube動画レスポンシブ */
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            margin: 40px 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* フッター */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        /* レスポンシブ対応 */
+        @media (max-width: 768px) {
+            .header {
+                padding: 40px 25px;
+            }
+
+            .main-title {
+                font-size: 28px;
+            }
+
+            .sub-title {
+                font-size: 14px;
+            }
+
+            .participants-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+            }
+
+            .content {
+                padding: 40px 25px;
+            }
+
+            .section-number {
+                font-size: 36px;
+            }
+
+            .section-title {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダーセクション -->
+    <header class="header">
+        <img src="https://i.imgur.com/4fS3GM1.png" alt="子育て座談会ヘッダー画像">
+    </header>
+
+    <!-- コンテンツセクション -->
+    <main class="content">
+        <!-- イントロテキスト -->
+        <div class="intro-text">
+            今回は「習い事」「自主学習」「親の希望と子どもの希望」について、保護者の皆さんにお話を伺いました。
+        </div>
+
+        <!-- 参加者グリッド -->
+        <div class="participants-grid" style="margin-bottom: 40px;">
+            <div class="participant">
+                <div class="participant-avatar">
+                    <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                </div>
+                <div class="participant-name">フクロウ</div>
+                <div class="participant-detail">司会</div>
+            </div>
+            <div class="participant">
+                <div class="participant-avatar">
+                    <img src="https://i.imgur.com/RHqSHQl.png" alt="カエル">
+                </div>
+                <div class="participant-name">カエル</div>
+                <div class="participant-detail">小1保護者</div>
+            </div>
+            <div class="participant">
+                <div class="participant-avatar">
+                    <img src="https://i.imgur.com/7VN40qN.png" alt="キリン">
+                </div>
+                <div class="participant-name">キリン</div>
+                <div class="participant-detail">小2保護者</div>
+            </div>
+            <div class="participant">
+                <div class="participant-avatar">
+                    <img src="https://i.imgur.com/0nCJ5Mi.png" alt="ダルメシアン">
+                </div>
+                <div class="participant-name">ダルメシアン</div>
+                <div class="participant-detail">3歳半保護者</div>
+            </div>
+            <div class="participant">
+                <div class="participant-avatar">
+                    <img src="https://i.imgur.com/sFeTuJe.png" alt="クマ">
+                </div>
+                <div class="participant-name">クマ</div>
+                <div class="participant-detail">3人の子保護者：中学生・小3・年長</div>
+            </div>
+        </div>
+
+        <!-- トークテーマ1: 習い事の現状について -->
+        <section class="talk-section">
+            <div class="section-number">01</div>
+            <h2 class="section-title">習い事の現状について</h2>
+
+            <!-- カエル家の習い事 -->
+            <div class="sub-section">
+                <div class="family-badge">カエル家の習い事</div>
+
+                <img src="https://i.imgur.com/XJlRF4g.png" alt="カエル家の習い事" style="width: 100%; height: 400px; object-fit: cover; margin: 20px 0;">
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/RHqSHQl.png" alt="カエル">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">カエル</div>
+                        <div class="speaker-text">小1の子は、勉強系は公文（プリント学習）、スポーツはスイミングに通っています。どちらも親から「やってみる？」と勧めて始めました。公文は嫌々やっている感じですが、教科書の一歩先を学べているので、小学校の授業に遅れる心配がなく、親子ともにストレスフリーな印象です。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">ちなみに、今トータルでいくらぐらいかかっているんですか？</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/RHqSHQl.png" alt="カエル">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">カエル</div>
+                        <div class="speaker-text">公文が高いんですよね。1教科8,000円で2教科やってるので1万6,000円。スイミングが7,000円なので、合わせて月額2万5,000円です。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">月2万5,000円！それは結構な出費ですね。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/RHqSHQl.png" alt="カエル">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">カエル</div>
+                        <div class="speaker-text">正直、スイミングはコストの面で辞めたいと親は思っているんですが、子どもが頑張っているうちは他を削減して何とか捻出している状況です。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">子どもは続けたいと言っているんですか？</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/RHqSHQl.png" alt="カエル">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">カエル</div>
+                        <div class="speaker-text">スイミングは楽しく通っています。公文は嫌々ですけど（笑）、学校の読み書きがスムーズなのは公文のおかげだよって刷り込みながら続けています。</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- キリン家の習い事 -->
+            <div class="sub-section">
+                <div class="family-badge">キリン家の習い事</div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/7VN40qN.png" alt="キリン">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">キリン</div>
+                        <div class="speaker-text">うちは最初に子ども自身が「やりたい」と言い出したのがプログラミングでした。レゴを組み立てて動かす体験に行って、そのまま入会しました。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">それは子ども発信なんですね。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/7VN40qN.png" alt="キリン">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">キリン</div>
+                        <div class="speaker-text">そうなんです。スポーツ系は本当はスイミングをやってほしかったんですが、やりたがらなくて。幼稚園で開催されていたスポーツクラブの振替でスイミング教室があったので、試しに行ってもらったら、あまりにも泳げなくて…。これは通わせないとダメだなと思い、今月から急遽スイミングを始めました。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">泳げない子の泳ぎ方だった、と（笑）。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/7VN40qN.png" alt="キリン">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">キリン</div>
+                        <div class="speaker-text">本当に（笑）。でも本人も自覚したみたいで、今は前向きに通っています。</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 画像プレースホルダー -->
+            <img src="https://i.imgur.com/ZRvaSnw.png" alt="キリン家の習い事" style="width: 100%; height: 400px; object-fit: cover; margin: 40px 0;">
+
+            <!-- ダルメシアン家の習い事 -->
+            <div class="sub-section">
+                <div class="family-badge">ダルメシアン家の習い事</div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/0nCJ5Mi.png" alt="ダルメシアン">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">ダルメシアン</div>
+                        <div class="speaker-text">うちは子どもがまだ3歳半になったばかりです（昨日で）。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">おめでとうございます！</div>
+                    </div>
+                </div>
+
+                <img src="https://i.imgur.com/sQQFTmu.png" alt="ダルメシアン家の習い事" style="width: 100%; height: 400px; object-fit: cover; margin: 20px 0;">
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/0nCJ5Mi.png" alt="ダルメシアン">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">ダルメシアン</div>
+                        <div class="speaker-text">ありがとうございます。まだ小さいので、皆さんのお子さんより「これからどうしようか」という段階なんですが、唯一、親から「やってほしい」という思いでほぼ無理やり行かせているのが英会話教室ですね。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">3歳半で英会話！子どもの反応はどうですか？</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/0nCJ5Mi.png" alt="ダルメシアン">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">ダルメシアン</div>
+                        <div class="speaker-text">まだ本人は何をやっているかよく分かっていないと思うんですけど（笑）、楽しんでいる様子ではあります。親としては早いうちから英語に触れさせたいという思いがあって。</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ハイライトボックス -->
+            <div class="highlight-box">
+                <h4>習い事事情まとめ</h4>
+                <ul>
+                    <li>公文とスイミングで月2万5,000円（カエル家）</li>
+                    <li>プログラミング教室は子ども発信（キリン家）</li>
+                    <li>3歳半から英会話教室に通わせている（ダルメシアン家）</li>
+                    <li>親の希望と子どもの希望のバランスが課題</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- トークテーマ2: 自主学習の取り組み -->
+        <section class="talk-section">
+            <div class="section-number">02</div>
+            <h2 class="section-title">自主学習の取り組み</h2>
+
+            <div class="speaker">
+                <div class="speaker-avatar">フ</div>
+                <div class="speaker-content">
+                    <div class="speaker-name">フクロウ</div>
+                    <div class="speaker-text">習い事以外に、自主学習ってやられていますか？</div>
+                </div>
+            </div>
+
+            <!-- カエル家の自主学習 -->
+            <div class="sub-section">
+                <div class="family-badge">カエル家の自主学習</div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/RHqSHQl.png" alt="カエル">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">カエル</div>
+                        <div class="speaker-text">うちは公文=自主学習という位置づけにしています。学校の宿題+αという形なんですが、この公文が本当に嫌々やっているので重くて（笑）。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">嫌々なんですね（笑）。どうやって続けさせているんですか？</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/RHqSHQl.png" alt="カエル">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">カエル</div>
+                        <div class="speaker-text">学校の読み書きがスムーズにいっているのは公文のおかげだよ、とすり込みをしながら進めているんですが（笑）、やはりプリントと向き合うのが辛いみたいです。これを嫌々な時間に変換させてしまうと今後もっと辛くなっちゃうから、何とかこの自主学習の時間を楽しいものにさせたいんですけど…</div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <h4 style="font-size: 16px; color: #5a9; margin-bottom: 10px; font-weight: bold;">「公文のおかげ」と刷り込む親ガエルの図</h4>
+                    <img src="https://i.imgur.com/SCYlzzx.png" alt="カエル家の自主学習" style="width: 100%; height: 400px; object-fit: cover;">
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">何か工夫されていることはありますか？</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/RHqSHQl.png" alt="カエル">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">カエル</div>
+                        <div class="speaker-text">苦渋の策でおやつで釣ったりすることも…。本末転倒ですよね（笑）。本当に悩んでいる最中です。</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- キリン家の自主学習 -->
+            <div class="sub-section">
+                <div class="family-badge">キリン家の自主学習</div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/7VN40qN.png" alt="キリン">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">キリン</div>
+                        <div class="speaker-text">うちは学校の宿題+αで、通信教育のチャレンジをやっています。幼稚園の時から机に向かう習慣をつけようと思って、1日10〜15分取ってきたんですよね。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">習慣づけは成功していますか？</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/7VN40qN.png" alt="キリン">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">キリン</div>
+                        <div class="speaker-text">何となく机に向かうことはできるんですが、学校の宿題がボリュームがあるのでどんどん溜まっていって…。チャレンジの教材が首より高く積み上がっている状態です（笑）。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">それは辞めることも考えますよね。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/7VN40qN.png" alt="キリン">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">キリン</div>
+                        <div class="speaker-text">本当は辞めたいんですけど、始めたからには…という気持ちもあって。辞めるのも悩んでいるところです。</div>
+                    </div>
+                </div>
+
+                <img src="https://i.imgur.com/V2B8z6e.png" alt="キリン家の自主学習" style="width: 100%; height: 400px; object-fit: cover; margin: 20px 0;">
+            </div>
+
+            <!-- ダルメシアン家の自主学習 -->
+            <div class="sub-section">
+                <div class="family-badge">ダルメシアン家の自主学習</div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/0nCJ5Mi.png" alt="ダルメシアン">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">ダルメシアン</div>
+                        <div class="speaker-text">うちは幼児ポピーを2回ほど届けてもらったんですが、辞めてしまいました。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">2回で辞めたんですか？何かあったんですか？</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/0nCJ5Mi.png" alt="ダルメシアン">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">ダルメシアン</div>
+                        <div class="speaker-text">シールを貼るページがあったんですが、シールを貼ることが楽しすぎて、全部適当にペタペタ貼っちゃって「シール貼ったから終わり！」みたいな（笑）。その後の学習に全然続かなかったので、子どもがあまり興味を示してくれなかったんですね。</div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <h4 style="font-size: 16px; color: #5a9; margin-bottom: 10px; font-weight: bold;">シール貼りが目的になってしまった子ダルメシアンの図</h4>
+                    <img src="https://i.imgur.com/t0JcBxt.png" alt="ダルメシアン家のシール貼り学習" style="width: 100%; height: 400px; object-fit: cover;">
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">3歳半だとまだ難しいですよね。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/0nCJ5Mi.png" alt="ダルメシアン">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">ダルメシアン</div>
+                        <div class="speaker-text">そうなんです。一旦辞めて、もう少し大きくなってから再開するかもしれません。</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 親世代の話 -->
+            <div class="sub-section">
+                <div class="family-badge">親世代の話</div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">クマさんもいらっしゃるので、お話を伺いたいんですが、そもそも皆さんって、お子さんと同じ年齢の頃、自分は机に向かっていましたか？</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/RHqSHQl.png" alt="カエル">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">カエル</div>
+                        <div class="speaker-text">向かってないですね（笑）。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">一同</div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">一同</div>
+                        <div class="speaker-text">（笑）</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/RHqSHQl.png" alt="カエル">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">カエル</div>
+                        <div class="speaker-text">自分ができてなかったのに子どもには向き合わせようとするって、嫌ですね（笑）。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/sFeTuJe.png" alt="クマ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">クマ</div>
+                        <div class="speaker-text">わかります、それ（笑）。自分できてなかったのに。</div>
+                    </div>
+                </div>
+
+                <img src="https://i.imgur.com/Q5PhAYB.png" alt="親世代の共感エピソード" style="width: 100%; height: 400px; object-fit: cover; margin: 20px 0;">
+            </div>
+
+            <!-- ハイライトボックス -->
+            <div class="highlight-box">
+                <h4>自主学習の実態</h4>
+                <ul>
+                    <li>公文を嫌々やりながらも続けている（カエル家）</li>
+                    <li>チャレンジの教材が溜まりまくっている（キリン家）</li>
+                    <li>幼児ポピーは2回で辞めてしまった（ダルメシアン家）</li>
+                    <li>親世代も子どもの頃は机に向かっていなかった</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- トークテーマ3: ゲーム・デバイスとの付き合い方 -->
+        <section class="talk-section">
+            <div class="section-number">03</div>
+            <h2 class="section-title">ゲーム・デバイスとの付き合い方</h2>
+
+            <div class="speaker">
+                <div class="speaker-avatar">フ</div>
+                <div class="speaker-content">
+                    <div class="speaker-name">フクロウ</div>
+                    <div class="speaker-text">クマさんは、お子さんが3人いらっしゃるんですよね。自主学習はどのようにされていますか？</div>
+                </div>
+            </div>
+
+            <!-- クマ家の管理システム（導入部） -->
+            <div class="sub-section">
+                <div class="family-badge">クマ家の管理システム（導入部）</div>
+
+                <img src="https://i.imgur.com/8wuQGgO.png" alt="クマ家の管理システム" style="width: 100%; height: 400px; object-fit: cover; margin: 20px 0;">
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/sFeTuJe.png" alt="クマ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">クマ</div>
+                        <div class="speaker-text">学年の違う3人の子ども（中学生・小3・年長）を育てているんですが、報酬がないとやらないというのが自分の子育てで感じていることです。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">報酬というと、具体的にはどのような？</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/sFeTuJe.png" alt="クマ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">クマ</div>
+                        <div class="speaker-text">うちの場合はゲームやYouTubeが大好きなので、その時間を報酬にして、ドリルやタブレット学習をやらせています。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">ちょうど報酬とゲームの話になったので、ゲームやデバイスの関わり方について皆さんにお伺いしたいです。カエルさんのところはどうされていますか？</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- カエル家のゲーム管理 -->
+            <div class="sub-section">
+                <div class="family-badge">カエル家のゲーム管理</div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/RHqSHQl.png" alt="カエル">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">カエル</div>
+                        <div class="speaker-text">我が家はマイクラをダウンロードしたんですが、親がまずゲーム内容をインプットした上でルールを決めた方がいいのかなと思いつつ、まだ進んでいなくて…。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">親がまず理解してから、というのは大事ですよね。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/RHqSHQl.png" alt="カエル">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">カエル</div>
+                        <div class="speaker-text">なので今は、YouTubeやデバイスを見る時間を「1日60分まで」というざっくりなルールにしています。土日はもう少し長く120分とか。</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- キリン家のゲーム管理 -->
+            <div class="sub-section">
+                <div class="family-badge">キリン家のゲーム管理</div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/7VN40qN.png" alt="キリン">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">キリン</div>
+                        <div class="speaker-text">我が家はゲーム機自体がまだなくて。子どもの今年のクリスマスプレゼントの希望はSwitch 2なんです。</div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <h4 style="font-size: 16px; color: #5a9; margin-bottom: 10px; font-weight: bold;">大きな難題を突きつけられたサンタ代理の図</h4>
+                    <img src="https://i.imgur.com/qSA0QDk.png" alt="Switch 2を求められたサンタ代理" style="width: 100%; height: 400px; object-fit: cover;">
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">Switch 2！サンタさん、手に入るでしょうか（笑）。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/7VN40qN.png" alt="キリン">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">キリン</div>
+                        <div class="speaker-text">それが悩みどころで（笑）。ただ、タブレットでプログラミングの宿題をやるので、その宿題をやったら「にゃんこ大戦争」が20分できる、という1対1の時間でやっています。</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ダルメシアン家のゲーム管理 -->
+            <div class="sub-section">
+                <div class="family-badge">ダルメシアン家のゲーム管理</div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">ダルメシアンさんのところはこれからかなと思うんですが…</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/0nCJ5Mi.png" alt="ダルメシアン">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">ダルメシアン</div>
+                        <div class="speaker-text">実はうち、Switch 2があるんですよ（笑）。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">一同</div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">一同</div>
+                        <div class="speaker-text">！！！</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/0nCJ5Mi.png" alt="ダルメシアン">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">ダルメシアン</div>
+                        <div class="speaker-text">すみません（笑）。</div>
+                    </div>
+                </div>
+
+                <img src="https://i.imgur.com/eDFOTSl.png" alt="Switch 2を既に持っているダルメシアン家" style="width: 100%; height: 400px; object-fit: cover; margin: 20px 0;">
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">3歳半でSwitch 2！遊ぶ時間帯とかは分けられたりしていますか？</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/0nCJ5Mi.png" alt="ダルメシアン">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">ダルメシアン</div>
+                        <div class="speaker-text">ざっくりですね。寝る前の自由時間みたいな感じで。子どもに決めさせるんですよ。指で「3」とか「4」とか「5」とか作らせて、「じゃあ5回やったら寝ようね」って言って、強制的に切ってお布団に行く感じです。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">子どもに決めさせるんですね。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/0nCJ5Mi.png" alt="ダルメシアン">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">ダルメシアン</div>
+                        <div class="speaker-text">そうすると割と守ってくれるんですよね。</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- クマ家の複雑な管理システム -->
+            <div class="sub-section">
+                <div class="family-badge">クマ家の複雑な管理システム</div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/sFeTuJe.png" alt="クマ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">クマ</div>
+                        <div class="speaker-text">本当、子どもに決めさせると割と守ってくれる傾向がありますよね。確かにそうだなって思いました。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">クマさんのところは3人いらっしゃるので、管理が大変そうですね。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/sFeTuJe.png" alt="クマ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">クマ</div>
+                        <div class="speaker-text">うちはタブレット学習の1日分をやり切ったら、平日は1時間・休日は120分というルールにしています。もっと増やしたかったら、タブレット学習1個につき◯分付与という「増やせるシステム」を作っています。</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/wblESry.png" alt="フクロウ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">フクロウ</div>
+                        <div class="speaker-text">それは面白いシステムですね！</div>
+                    </div>
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-avatar">
+                        <img src="https://i.imgur.com/sFeTuJe.png" alt="クマ">
+                    </div>
+                    <div class="speaker-content">
+                        <div class="speaker-name">クマ</div>
+                        <div class="speaker-text">それぞれが自分のやりたいタイミングでAlexaに「10分経ったら教えて」って言って、その10分間やって残り何分かを計算しています。子どもたちも意外と自分で管理できるようになってきましたね。</div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <h4 style="font-size: 16px; color: #5a9; margin-bottom: 10px; font-weight: bold;">Alexaを勉強タイマーに活用しているそうです</h4>
+                    <img src="https://i.imgur.com/cKRW7iA.jpeg" alt="クマ家のAlexa活用法" style="width: 100%; height: 400px; object-fit: cover;">
+                </div>
+            </div>
+
+            <!-- ハイライトボックス -->
+            <div class="highlight-box">
+                <h4>デジタル機器との付き合い方</h4>
+                <ul>
+                    <li>平日60分・休日120分のルール（カエル家）</li>
+                    <li>勉強時間とゲーム時間を1対1に（キリン家）</li>
+                    <li>子どもに回数を決めさせると守りやすい（ダルメシアン家）</li>
+                    <li>学習するとゲーム時間が付与されるシステム（クマ家）</li>
+                    <li>子どもに決めさせることで自己管理能力が育つ</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- クロージング -->
+        <section class="talk-section">
+            <div class="family-badge">クロージング</div>
+
+            <div class="speaker">
+                <div class="speaker-avatar">フ</div>
+                <div class="speaker-content">
+                    <div class="speaker-name">フクロウ</div>
+                    <div class="speaker-text">聞きたいことはまだまだありますが、話し足りないですね（笑）。</div>
+                </div>
+            </div>
+
+            <div class="speaker">
+                <div class="speaker-avatar">
+                    <img src="https://i.imgur.com/RHqSHQl.png" alt="カエル">
+                </div>
+                <div class="speaker-content">
+                    <div class="speaker-name">カエル</div>
+                    <div class="speaker-text">本当ですね！もっと色々お話ししたかったです。</div>
+                </div>
+            </div>
+
+            <div class="speaker">
+                <div class="speaker-avatar">フ</div>
+                <div class="speaker-content">
+                    <div class="speaker-name">フクロウ</div>
+                    <div class="speaker-text">それでは、本日の座談会は以上で終了とさせていただきます。皆さん、ありがとうございました！</div>
+                </div>
+            </div>
+
+            <div class="speaker">
+                <div class="speaker-avatar">一同</div>
+                <div class="speaker-content">
+                    <div class="speaker-name">一同</div>
+                    <div class="speaker-text">ありがとうございました！</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- YouTube動画セクション -->
+        <section class="talk-section">
+            <h2 class="section-title">トークの動画はコチラ！</h2>
+            <div class="video-container">
+                <!-- 限定公開動画のサムネイル表示 -->
+                <div style="position: relative; background: #000; border-radius: 8px; overflow: hidden;">
+                    <a href="https://youtu.be/sO6Qv7NxeuQ?si=qKxNT3P4bYmlluUF" target="_blank" style="display: block; position: relative;">
+                        <img src="https://img.youtube.com/vi/sO6Qv7NxeuQ/maxresdefault.jpg" alt="子育て座談会の動画サムネイル" style="width: 100%; height: auto; display: block;">
+                        <!-- 再生ボタンオーバーレイ -->
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.8); border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                            <div style="width: 0; height: 0; border-left: 25px solid white; border-top: 15px solid transparent; border-bottom: 15px solid transparent; margin-left: 5px;"></div>
+                        </div>
+                        <!-- ホバー時の説明 -->
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white; padding: 20px; text-align: center;">
+                            <h3 style="margin: 0 0 10px 0; font-size: 18px;">子育て座談会の動画</h3>
+                            <p style="margin: 0; font-size: 14px; opacity: 0.9;">クリックしてYouTubeで視聴</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- 動画を「公開」に設定すると、以下のiframeが有効になります -->
+                <!-- <iframe src="https://www.youtube.com/embed/sO6Qv7NxeuQ?rel=0" title="子育て座談会 インタビュー動画" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        © aquwa Co.,Ltd. ALL Right Reserved.
+    </footer>
+</body>
+</html>
